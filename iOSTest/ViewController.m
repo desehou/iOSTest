@@ -9,9 +9,13 @@
 #import "ViewController.h"
 #import "KVCTestObject.h"
 #import "KVCTestSecondObject.h"
-
+#import "KVOTestObject.h"
 
 @interface ViewController ()
+{
+
+    KVOTestObject *kvoTestObject;
+}
 
 @end
 
@@ -21,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self KVCTest];
-  
+    [self KVOTest];
 }
 
 
@@ -77,6 +81,36 @@
     
 }
 
+/*
+ KVC实际使用
+KVO使用三部曲：
+1. 注册，指定被观察者的属性
+2. 实现回调方法
+3. 移除观察
+ */
+#pragma mark -KVO
+-(void)KVOTest{
+    kvoTestObject=[[KVOTestObject alloc]init];
+    [kvoTestObject setValue:@"KVO" forKey:@"testName"];
+    [kvoTestObject setValue:@"1.5" forKey:@"testPrice"];
+    //1. 注册，指定被观察者的属性
+    [kvoTestObject addObserver:self forKeyPath:@"testPrice" options:NSKeyValueObservingOptionNew context:nil];
+    
+    [kvoTestObject setValue:@"1.8" forKey:@"testPrice"];
+}
+//2. 实现回调方法
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"testPrice"]) {
+        NSLog(@"KOV.testPrice=%@",[kvoTestObject valueForKey:@"testPrice"]);
+    }
+
+}
+//3. 移除观察
+-(void)dealloc
+{
+    [kvoTestObject removeObserver:self forKeyPath:@"testPrice"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

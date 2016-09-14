@@ -15,6 +15,7 @@
 		CB04D4CF1D825564004853FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB04D4CD1D825564004853FA /* LaunchScreen.storyboard */; };
 		CB04D4EB1D828FB2004853FA /* KVCTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04D4EA1D828FB2004853FA /* KVCTestObject.m */; };
 		CB04D4EE1D829981004853FA /* KVCTestSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04D4ED1D829981004853FA /* KVCTestSecondObject.m */; };
+		CB08B00C1D892035003F920B /* KVOTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB08B00B1D892035003F920B /* KVOTestObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		CB04D4EA1D828FB2004853FA /* KVCTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCTestObject.m; sourceTree = "<group>"; };
 		CB04D4EC1D829981004853FA /* KVCTestSecondObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCTestSecondObject.h; sourceTree = "<group>"; };
 		CB04D4ED1D829981004853FA /* KVCTestSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCTestSecondObject.m; sourceTree = "<group>"; };
+		CB08B00A1D892035003F920B /* KVOTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOTestObject.h; sourceTree = "<group>"; };
+		CB08B00B1D892035003F920B /* KVOTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOTestObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 		CB04D4DE1D8258C4004853FA /* KVO */ = {
 			isa = PBXGroup;
 			children = (
+				CB08B00A1D892035003F920B /* KVOTestObject.h */,
+				CB08B00B1D892035003F920B /* KVOTestObject.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				CB04D4C71D825564004853FA /* ViewController.m in Sources */,
 				CB04D4EE1D829981004853FA /* KVCTestSecondObject.m in Sources */,
 				CB04D4EB1D828FB2004853FA /* KVCTestObject.m in Sources */,
+				CB08B00C1D892035003F920B /* KVOTestObject.m in Sources */,
 				CB04D4C41D825564004853FA /* AppDelegate.m in Sources */,
 				CB04D4C11D825564004853FA /* main.m in Sources */,
 			);
@@ -428,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewanse.miaomi.iOSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewanse.miaomi.iOSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
