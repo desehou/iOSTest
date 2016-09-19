@@ -10,7 +10,7 @@
 #import "KVCTestObject.h"
 #import "KVCTestSecondObject.h"
 #import "KVOTestObject.h"
-
+#import "GCDObject.h"
 @interface ViewController ()
 {
 
@@ -26,6 +26,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self KVCTest];
     [self KVOTest];
+    
+    
+    GCDObject *gcdObject=[[GCDObject alloc]init];
+    [gcdObject main_queue_test];
+    [gcdObject global_queue_test];
+    [gcdObject global_queue_sync_test];
 }
 
 
@@ -111,6 +117,8 @@ KVO使用三部曲：
 {
     [kvoTestObject removeObserver:self forKeyPath:@"testPrice"];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

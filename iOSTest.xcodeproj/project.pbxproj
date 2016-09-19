@@ -16,6 +16,7 @@
 		CB04D4EB1D828FB2004853FA /* KVCTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04D4EA1D828FB2004853FA /* KVCTestObject.m */; };
 		CB04D4EE1D829981004853FA /* KVCTestSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04D4ED1D829981004853FA /* KVCTestSecondObject.m */; };
 		CB08B00C1D892035003F920B /* KVOTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CB08B00B1D892035003F920B /* KVOTestObject.m */; };
+		CBDDC4651D8E781600F46990 /* GCDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDDC4641D8E781600F46990 /* GCDObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		CB04D4ED1D829981004853FA /* KVCTestSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCTestSecondObject.m; sourceTree = "<group>"; };
 		CB08B00A1D892035003F920B /* KVOTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOTestObject.h; sourceTree = "<group>"; };
 		CB08B00B1D892035003F920B /* KVOTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOTestObject.m; sourceTree = "<group>"; };
+		CBDDC4631D8E781600F46990 /* GCDObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDObject.h; sourceTree = "<group>"; };
+		CBDDC4641D8E781600F46990 /* GCDObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 		CB04D4BE1D825564004853FA /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				CBDDC45F1D8E67CE00F46990 /* OC-Swift混编 */,
+				CBDDC45D1D8E676D00F46990 /* Hybrid模式 */,
 				CB6616F71D83903800B8005C /* AES加密 */,
 				CB04D4D71D8258C4004853FA /* CABasicAnimation */,
 				CB04D4D81D8258C4004853FA /* CALayer */,
@@ -145,6 +150,8 @@
 		CB04D4DC1D8258C4004853FA /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				CBDDC4631D8E781600F46990 /* GCDObject.h */,
+				CBDDC4641D8E781600F46990 /* GCDObject.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -246,6 +253,20 @@
 			path = "AES加密";
 			sourceTree = "<group>";
 		};
+		CBDDC45D1D8E676D00F46990 /* Hybrid模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Hybrid模式";
+			sourceTree = "<group>";
+		};
+		CBDDC45F1D8E67CE00F46990 /* OC-Swift混编 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "OC-Swift混编";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDDC4651D8E781600F46990 /* GCDObject.m in Sources */,
 				CB04D4C71D825564004853FA /* ViewController.m in Sources */,
 				CB04D4EE1D829981004853FA /* KVCTestSecondObject.m in Sources */,
 				CB04D4EB1D828FB2004853FA /* KVCTestObject.m in Sources */,
